@@ -1,3 +1,4 @@
 .env
 __psycache__/
 env/
+__psycache__
