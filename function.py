@@ -12,12 +12,11 @@ def extract_negative_treatments(slug):
     case_text = soup.get_text()   
     
     results = query_openai(case_text)
-
     content_list = []
 
     for key, value in results.items():
         if key != 'response1':
             content = value['choices'][0]['message']['content']
             content_list.append(content)
-    
+
     return content_list
